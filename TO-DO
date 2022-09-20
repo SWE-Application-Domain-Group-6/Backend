@@ -1,0 +1,15 @@
+CURRENT TO DO
+--------------------------------
+Set up JDBC to the msql server
+Create tables for users with fields for permission status, and information
+add database files to github
+
+
+----------------------
+
+Setting up JDBC connection in intellij
+https://stackoverflow.com/questions/38660104/how-to-connect-intellij-with-local-mysql
+
+setting up web server in intellij (should be able to pull all files from git)
+https://javapointers.com/how-to/creating-web-application-using-maven-in-intellij/
+
