@@ -72,8 +72,8 @@
     <connections>
       <connection id="c7754e5f-6087-49a1-a3b1-5b02cbc6427e" active="true" signed="true">
         <database>
-          <name value="Connection" />
-          <description value="" />
+          <name value="RDS" />
+          <description value="db" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
           <database-version value="8.0" />
@@ -81,12 +81,12 @@
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
-          <host value="localhost" />
+          <host value="apptest.cyu0zp5qje42.us-east-2.rds.amazonaws.com " />
           <port value="3306" />
-          <database value="mysql" />
+          <database value="apptest" />
           <type value="USER_PASSWORD" />
-          <user value="root" />
-          <deprecated-pwd value="YXNkZjExQEFTREY=" />
+          <user value="admin" />
+          <deprecated-pwd value="bWFwcGxpY2F0aW9uZG9tYWlu" />
         </database>
         <properties>
           <auto-commit value="false" />
@@ -280,12 +280,18 @@
           <content-type name="DTD" enabled="true" />
           <content-type name="HTML" enabled="true" />
           <content-type name="XHTML" enabled="true" />
+          <content-type name="CSS" enabled="true" />
           <content-type name="Java" enabled="true" />
           <content-type name="SQL" enabled="true" />
           <content-type name="PL/SQL" enabled="true" />
+          <content-type name="JavaScript" enabled="true" />
           <content-type name="JSON" enabled="true" />
           <content-type name="JSON5" enabled="true" />
+          <content-type name="JSP" enabled="true" />
+          <content-type name="JSPx" enabled="true" />
           <content-type name="Groovy" enabled="true" />
+          <content-type name="FTL" enabled="true" />
+          <content-type name="VTL" enabled="true" />
           <content-type name="AIDL" enabled="true" />
           <content-type name="YAML" enabled="true" />
           <content-type name="Manifest" enabled="true" />

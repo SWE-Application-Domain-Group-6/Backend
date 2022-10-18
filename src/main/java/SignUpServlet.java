@@ -13,7 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mysql.cj.xdevapi.Statement;
+//uncomment if using eclipse/not downloading sql plugin for intellij
+//import com.mysql.cj.xdevapi.Statement;
 
 /**
  * Servlet implementation class SignUpServlet
