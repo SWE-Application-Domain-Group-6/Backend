@@ -2,10 +2,10 @@
 
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.Date;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,7 +29,8 @@ public class SignUpServlet extends HttpServlet {
 	String address;
 	Date dob;
 	String email;
-	
+
+	String temp;
 	
 	
     /**
@@ -55,30 +56,34 @@ public class SignUpServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 		Connection connection;
-		fname = request.getParameter("First name");
+		fname = request.getParameter("firstname");
+		lname = request.getParameter("lastname");
 		password = request.getParameter("psw");
+		email = request.getParameter("email");
 		address = request.getParameter("address");
-		String temp = request.getParameter("dob");
-		//dob  = dob.parse(temp);
-		
+		temp = request.getParameter("dob");
+
 		try {
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/app_test", "root", "asdf11@ASDF");
-			java.sql.Statement statement=connection.createStatement();
-		//	String sql  = "VALUES (1001, "+ fname + ", "+ lname +", " + permission_Level + null + 1 + password + address ")";
-			
-			
-		//	statement.executeUpdate("INSERT INTO user_accounts " + sql);
+			dob  = new SimpleDateFormat("dd/MM/yyyy").parse(temp);
+		} catch (ParseException e) {
+			System.out.println("Date formatting error");
+			throw new RuntimeException(e);
+		}
+
+		try {
+			String sinsert = "from ui ('" + fname + "', '" +  lname + "', '" + email + "', '" + address + "', '" + temp + "')";
+			System.out.println(sinsert);
+
+			SignUp.signup(password, fname, lname, email, address, temp);
+
+
+
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
-		
-		
-		
-		
-		
-		
+
+
 	}
 
 }

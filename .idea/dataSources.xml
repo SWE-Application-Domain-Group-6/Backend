@@ -6,6 +6,9 @@
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://apptest.cyu0zp5qje42.us-east-2.rds.amazonaws.com:3306</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="JdbcLog.Enabled" value="true" />
+      </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
