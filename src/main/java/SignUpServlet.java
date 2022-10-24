@@ -1,4 +1,10 @@
 
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -7,11 +13,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
 
 //uncomment if using eclipse/not downloading sql plugin for intellij
 //import com.mysql.cj.xdevapi.Statement;
@@ -75,6 +77,18 @@ public class SignUpServlet extends HttpServlet {
 			System.out.println(sinsert);
 
 			SignUp.signup(password, fname, lname, email, address, temp);
+
+
+			if(request.getParameter("pageName").equals("admin")){
+				RequestDispatcher rd=request.getRequestDispatcher("AdminView Confirmation Screen.html");
+				rd.forward(request,response);
+			} else if (request.getParameter("pageName").equals("manager")) {
+				RequestDispatcher rd=request.getRequestDispatcher("ManagerView Confirmation Screen.html");
+				rd.forward(request,response);
+			} else if (request.getParameter("pageName").equals("accountant")) {
+				RequestDispatcher rd=request.getRequestDispatcher("AccountantView Confirmation Screen.html");
+				rd.forward(request,response);
+			}
 
 
 
