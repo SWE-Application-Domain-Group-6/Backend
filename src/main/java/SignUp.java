@@ -13,8 +13,8 @@ public class SignUp {
        Statement stmt = connection.createStatement();
 
 
-       String sinsert = "insert into user_accounts (password, fname, lname, email, address, dob) values ('"
-               + psw + "', '"+ fname + "', '" +  lname + "', '" + email + "', '" + address + "', '" + dob+ "')";
+       String sinsert = "insert into user_accounts (password, fname, lname, email, address, dob, permission_level) values ('"
+               + psw + "', '"+ fname + "', '" +  lname + "', '" + email + "', '" + address + "', '" + dob+ "', + " + "'regular')";
        System.out.println(sinsert);
 
 

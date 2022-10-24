@@ -5,16 +5,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.*;
 public class Login {
-	public static boolean validate(String name, String pass){
+	public static boolean validate(String email, String pass){
 		boolean status=false;
 		try {
 			//this is the new way to implement the db connector
 			dbConnector db =  new dbConnector();
 			Connection connection = db.dbConnector();
 
-			PreparedStatement preparedStatement=connection.prepareStatement("select password from user_accounts where fname=? and password=?");
+			PreparedStatement preparedStatement=connection.prepareStatement("select password from user_accounts where email=? and password=?");
 			
-			preparedStatement.setString(1,name);  
+			preparedStatement.setString(1,email);
 			preparedStatement.setString(2,pass);  
 			      
 			ResultSet rs=preparedStatement.executeQuery();  
@@ -38,7 +38,7 @@ public class Login {
 			connection = DriverManager.getConnection("jdbc:mysql://apptest.cyu0zp5qje42.us-east-2.rds.amazonaws.com:3306/sys", "admin", "applicationdomain");
 			//String sql = "select permission_Level from user_accounts where fname=" + "\"" + name + "\"";
 			//System.out.println(sql);
-			PreparedStatement preparedStatement=connection.prepareStatement("select permission_Level from user_accounts where fname=?");
+			PreparedStatement preparedStatement=connection.prepareStatement("select permission_Level from user_accounts where email=?");
 			preparedStatement.setString(1,name);  
 			ResultSet rs=preparedStatement.executeQuery();  
 			rs.next();
