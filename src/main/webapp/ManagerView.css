@@ -1,0 +1,245 @@
+body{
+    font-family: "Helvetica", sans-serif;
+    }
+    img{
+   position: absolute;
+   width: 357px;
+   height: 92px;
+   left: 858px;
+   top: 40px;
+
+    }
+
+
+    .container{
+   position: absolute;
+   width: 345px;
+   height: 1080px;
+   left: 0px;
+   top: 0px;
+
+   background: #272727;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius:20px;
+
+
+    }
+    /* .container2{
+       position: absolute;
+       width: 100%;
+       height: 75%;
+       top: 283px;
+       background: #FAFAFA;
+
+        }
+*/
+    h1{
+    font-weight: 1;
+    font-size: 30px;
+        text-align: center;
+    }
+
+    button{
+      box-sizing: border-box;
+
+    width: 170px;
+    height: 39px;
+    left: 542px;
+    top: 621px;
+
+    background: #141414;
+    border-radius: 7px;
+    color: white;
+    font-size: 13px;
+
+
+    }
+
+    input{
+
+      border: 1.2px solid #141414;
+      border-radius: 7px;
+          width: 180px;
+
+
+    
+    }
+       .coagold{
+
+        position: absolute;
+        width: 569.2px;
+        height: 595.69px;
+        left: 413px;
+        top: 300px;
+
+        }
+
+        .jegreen{
+
+        position: absolute;
+        width: 569.2px;
+        height: 595.69px;
+        left: 1054px;
+        top: 300px;
+
+        }
+
+
+
+        h1{
+        position: absolute;
+       left: 460px;
+       top: 156px;
+        }
+
+        h2{
+
+        position: absolute;
+        left: 460px;
+        top: 200px;
+        font-weight: normal;
+        font-size: 20px;
+
+
+        }
+        .coachart{
+
+                position: absolute;
+                width: 569.2px;
+                height: 595.69px;
+                left: 413px;
+                top: 300px;
+
+                     text-align: center;
+
+
+                }
+
+        .journalentries{
+
+                position: absolute;
+                width: 569.2px;
+                height: 595.69px;
+                left: 1054px;
+                top: 300px;
+
+                     text-align: center;
+                       font-size: 15px;
+
+                }
+
+
+
+       h4{
+       position: absolute;
+       left: 1500px;
+       top: 35px;
+
+       font-weight: 400;
+       font-size: 16px;
+       line-height: 20px;
+
+       }
+
+        h5{
+                            position: absolute;
+                            left: 1511px;
+                            top: 52px;
+                            font-weight: 700;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: #FDBB30;
+
+                            }
+
+    .usericon{
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 1598px;
+    top: 36px;
+    }
+
+ /* The side navigation menu */
+         .sidebar {
+                      height: 100%; /* Full-height: remove this if you want "auto" height */
+                        width: 275px; /* Set the width of the sidebar */
+                        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+                        z-index: 1; /* Stay on top */
+                        top: 0; /* Stay at the top */
+                        left: 0;
+                        background-color: #272727;
+                        overflow-x: hidden; /* Disable horizontal scroll */
+                        padding-top: 20px;
+                     }
+
+            /* Sidebar links */
+            .sidebar a {
+              display: block;
+              color: white;
+              padding: 16px;
+              text-decoration: none;
+            }
+
+            /* Active/current link */
+            .sidebar a.active {
+              background-color: #FDBB30;
+              color: white;
+            }
+
+            /* Links on mouse-over */
+            .sidebar a:hover:not(.active) {
+              background-color: #555;
+              color: white;
+            }
+
+            /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+           .main {
+                         margin-left: 275px; /* Same as the width of the sidebar */
+                         padding: 0px 10px;
+                           }
+
+            /* On screens that are less than 700px wide, make the sidebar into a topbar */
+            @media screen and (max-width: 700px) {
+              .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+              }
+              .sidebar a {float: left;}
+              div.content {margin-left: 0;}
+            }
+
+            /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+            @media screen and (max-width: 400px) {
+              .sidebar a {
+                text-align: center;
+                float: none;
+              }
+}
+
+
+/* table style */
+ table {
+   background-color: #F9F9F9;
+
+     font-weight: 100;
+
+ margin-left: auto;
+   margin-right: auto;
+   border-collapse: collapse;
+   width: 100%;
+ }
+
+ td, th {
+   border: 0px solid #dddddd;
+   text-align: left;
+   padding: 16px;
+ }
+
+ tr:nth-child(even) {
+   background-color: #dddddd;
+      border: 1px solid #BDBDBD;
+
+ }

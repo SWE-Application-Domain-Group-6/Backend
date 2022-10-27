@@ -1,0 +1,155 @@
+body{
+    font-family: "Helvetica", sans-serif;
+    }
+    img{
+   position: absolute;
+   width: 357px;
+   height: 92px;
+   left: 858px;
+   top: 40px;
+
+    }
+
+
+    .container{
+   position: absolute;
+   width: 345px;
+   height: 1080px;
+   left: 0px;
+   top: 0px;
+
+   background: #272727;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius:20px;
+
+
+    }
+     .container2{
+       position: absolute;
+       width: 1378px;
+       height: 797px;
+       left: 350px;
+       top: 283px;
+
+       background: #FAFAFA;
+       box-shadow: 0px -4px 22px rgba(0, 0, 0, 0.1);
+       border-radius: 56px;
+
+        }
+
+    h1{
+    font-weight: 1;
+    font-size: 30px;
+        text-align: center;
+    }
+
+    button{
+      box-sizing: border-box;
+
+    width: 170px;
+    height: 39px;
+    left: 542px;
+    top: 621px;
+
+    background: #141414;
+    border-radius: 7px;
+    color: white;
+    font-size: 13px;
+
+
+    }
+
+    input{
+
+      border: 1.2px solid #141414;
+      border-radius: 7px;
+          width: 180px;
+
+
+    
+    }
+       .coa{
+
+        position: absolute;
+        width: 569.2px;
+        height: 595.69px;
+        left: 413px;
+        top: 373.31px;
+
+        }
+
+        .je{
+
+        position: absolute;
+        width: 569.2px;
+        height: 595.69px;
+        left: 1054px;
+        top: 373.31px;
+
+        }
+
+
+
+        h1{
+        position: absolute;
+       left: 460px;
+       top: 156px;
+        }
+
+        h2{
+
+        position: absolute;
+        left: 460px;
+        top: 200px;
+        font-weight: normal;
+        font-size: 20px;
+
+
+        }
+        .coa2{
+
+                position: absolute;
+                width: 569.2px;
+                height: 595.69px;
+                left: 413px;
+                top: 373.31px;
+
+                     text-align: center;
+
+
+                }
+
+        .je2{
+
+                position: absolute;
+                width: 569.2px;
+                height: 595.69px;
+                left: 1054px;
+                top: 373.31px;
+
+                     text-align: center;
+                       font-size: 15px;
+
+                }
+
+
+
+       h4{
+       position: absolute;
+       left: 1500px;
+       top: 35px;
+
+       font-weight: 400;
+       font-size: 16px;
+       line-height: 20px;
+
+       }
+
+    .usericon{
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 1598px;
+    top: 36px;
+    }

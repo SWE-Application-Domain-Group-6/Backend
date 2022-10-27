@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
 		System.out.println("Username: " + username + "\nPassword: " + password);
 		if(Login.validate(username, password)) {
 			
-			if(Login.getRole(username).equals("admin")) {
+			if(Login.getRole(username).equals(("admin"))|Login.getRole(username).equals(("administrator"))) {
 				RequestDispatcher rd=request.getRequestDispatcher("AdminView.html");
 		        rd.forward(request,response);  
 			}

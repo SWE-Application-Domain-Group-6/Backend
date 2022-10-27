@@ -58,6 +58,7 @@ public class adminViewServlet extends HttpServlet {
         if(request.getParameter("assignrole")!= null){
             try {
                 email = request.getParameter("em");
+                System.out.println(email +"\t" + role);
                 adminView.updateUser(email, role);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
