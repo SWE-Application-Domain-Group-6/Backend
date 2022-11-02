@@ -1,10 +1,22 @@
+package JavaFilesAndServlets;
+
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.*;
 
 public class JournalEntry {
+
+    public static void main (String args[]) {
+        try {
+            System.out.println("Choosing all journal entries with account ID 7. ");
+            JournalEntry j1 = new JournalEntry();
+            j1.getJournalEntries(7);
+            j1.journalEntryList.display();
+        }
+        catch (SQLException ex){}
+    }
+
 
     public int entryNum;
     public int accountID;
@@ -62,7 +74,7 @@ public class JournalEntry {
         this.credit = credit;
     }
 
-    public void getJournalEntries(int accountID)throws SQLException, ClassNotFoundException{
+    public void getJournalEntries(int accountID)throws SQLException{
         String sqlStatement = ("select * from journal_entries where accountID = '" + accountID + "'");
         Statement statement;
         ResultSet resultSet;
@@ -89,7 +101,14 @@ public class JournalEntry {
         }//Establishing connection
     }
 
-
+    public void display(){
+        System.out.println("Entry Number: " + entryNum);
+        System.out.println("Account ID: " + accountID);
+        System.out.println("Date: " + date);
+        System.out.println("Account Name: " + accountName);
+        System.out.println("Debit: " + debit);
+        System.out.println("Credit: " + credit);
+    }
 
 
 

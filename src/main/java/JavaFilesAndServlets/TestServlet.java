@@ -1,4 +1,4 @@
-
+package JavaFilesAndServlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
 
 /**
- * Servlet implementation class TestServlet
+ * Servlet implementation class JavaFilesAndServlets.TestServlet
  */
-@WebServlet("/TestServlet")
+@WebServlet("/JavaFilesAndServlets.TestServlet")
 public class TestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

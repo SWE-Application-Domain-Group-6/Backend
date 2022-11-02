@@ -1,3 +1,5 @@
+package JavaFilesAndServlets;
+
 import java.util.Date;
 
 public class User {

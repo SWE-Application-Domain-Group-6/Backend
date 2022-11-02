@@ -1,7 +1,8 @@
+package JavaFilesAndServlets;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Date;
 
 public class SignUp {
     public static void signup(String psw, String fname, String lname, String email, String address, String dob) throws SQLException {

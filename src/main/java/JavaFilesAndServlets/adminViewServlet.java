@@ -1,19 +1,16 @@
-
+package JavaFilesAndServlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet(name = "adminViewServlet", value = "/adminViewServlet")
+@WebServlet(name = "JavaFilesAndServlets.adminViewServlet", value = "/JavaFilesAndServlets.adminViewServlet")
 public class adminViewServlet extends HttpServlet {
     String fname;
     String lname;

@@ -1,11 +1,11 @@
 <%--
   Created by IntelliJ IDEA.
-  User: ander
+  JavaFilesAndServlets.User: ander
   Date: 11/1/2022
   Time: 10:37 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="User"%>
+<%@ page import="JavaFilesAndServlets.*"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -50,7 +50,7 @@
 <div class="coachart">
   <br/> <br/>
 
-  <h3>Chart of Accounts</h3>
+  <h3>Chart of JavaFilesAndServlets.Accounts</h3>
   <table>
     <tr>
       <th>Account #</th>
@@ -117,6 +117,7 @@
 
   <h3>Journal Entries</h3>
   <%
+      JournalEntry j1 = new JournalEntry();
 
   %>
   <table>

@@ -1,3 +1,4 @@
+package JavaFilesAndServlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,9 +20,9 @@ import java.util.Date;
 //import com.mysql.cj.xdevapi.Statement;
 
 /**
- * Servlet implementation class SignUpServlet
+ * Servlet implementation class JavaFilesAndServlets.SignUpServlet
  */
-@WebServlet("/SignUpServlet")
+@WebServlet("/JavaFilesAndServlets.SignUpServlet")
 public class SignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	String fname;

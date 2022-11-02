@@ -1,3 +1,5 @@
+package JavaFilesAndServlets;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -6,9 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class JavaFilesAndServlets.LoginServlet
  */
-@WebServlet("/LoginServlet")
+@WebServlet("/JavaFilesAndServlets.LoginServlet")
 public class LoginServlet extends HttpServlet {
 	String username;
 	String password;
