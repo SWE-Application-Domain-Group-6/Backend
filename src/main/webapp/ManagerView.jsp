@@ -61,51 +61,7 @@
       <td></td>
       <td></td>
       <td></td>
-
     </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-
   </table>
 
 
@@ -116,56 +72,21 @@
   <br/> <br/>
 
   <h3>Journal Entries</h3>
-  <%
-      JournalEntry j1 = new JournalEntry();
-
-  %>
   <table>
     <tr>
       <th>Date</th>
       <th>Entry</th>
     </tr>
+    <%
+      for (int i = 0; i < 5; i++){
+    %>
     <tr>
-      <td></td>
-      <td></td>
-
+      <td>Date number <%=i+1%></td>
+      <td>Entry number <%=i+1%></td>
     </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-
+    <%
+      }
+    %>
   </table>
 
 </div>
