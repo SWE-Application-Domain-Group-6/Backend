@@ -7,17 +7,6 @@ import java.sql.*;
 
 public class JournalEntry {
 
-    public static void main (String args[]) {
-        try {
-            System.out.println("Choosing all journal entries with account ID 7. ");
-            JournalEntry j1 = new JournalEntry();
-            j1.getJournalEntries(7);
-            j1.journalEntryList.display();
-        }
-        catch (SQLException ex){}
-    }
-
-
     public int entryNum;
     public int accountID;
     public String date;

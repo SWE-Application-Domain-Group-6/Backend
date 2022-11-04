@@ -74,15 +74,26 @@
   <h3>Journal Entries</h3>
   <table>
     <tr>
+      <th>Entry Number</th>
+      <th>Account ID</th>
       <th>Date</th>
-      <th>Entry</th>
+      <th>Account Name</th>
+      <th>Debit</th>
+      <th>Credit</th>
     </tr>
     <%
-      for (int i = 0; i < 5; i++){
+      JournalEntry j1 = new JournalEntry();
+      j1.getJournalEntries(1);
+      for (int i = 0; i < j1.journalEntryList.size(); i++){
+        JournalEntry t1 = j1.journalEntryList.getJournalEntry(i);
     %>
     <tr>
-      <td>Date number <%=i+1%></td>
-      <td>Entry number <%=i+1%></td>
+      <td><%=t1.getEntryNum()%></td>
+      <td><%=t1.getAccountID()%></td>
+      <td><%=t1.getDate()%></td>
+      <td><%=t1.getAccountName()%></td>
+      <td><%=t1.getDebit()%></td>
+      <td><%=t1.getCredit()%></td>
     </tr>
     <%
       }
