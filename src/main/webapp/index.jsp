@@ -16,7 +16,7 @@
 <h1>Welcome</h1>
 <ul>
     <li><a href="#">Home</a></li>
-    <li><a href="Login.html">Login</a></li>
+    <li><a href="Login.jsp">Login</a></li>
     <li><a href="#">Contact</a></li>
     <li><a href="#">About</a></li>
 
