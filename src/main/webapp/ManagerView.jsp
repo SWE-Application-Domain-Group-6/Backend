@@ -28,10 +28,10 @@
 <div class="sidebar">
   <a class="active" href="ManagerView.jsp"><i class="fa fa-fw fa-home"></i> Home</a>
   <!-- <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> -->
-  <a href="ManagerView View Users.html"><i class="fa fa-fw fa fa-users"></i> View Users</a>
-  <a href="ManagerView Assign Roles.html"><i class="fa fa-fw fa-user"></i> Assign Roles</a>
-  <a href="ManagerView Email.html"><i class="fa fa-fw fa-envelope"></i> Email</a>
-  <a href="ManagerView Help.html"><i class="fa fa-question-circle"></i> Help</a>
+  <a href="ManagerView View Users.jsp"><i class="fa fa-fw fa fa-users"></i> View Users</a>
+  <a href="ManagerView Assign Roles.jsp"><i class="fa fa-fw fa-user"></i> Assign Roles</a>
+  <a href="ManagerView Email.jsp"><i class="fa fa-fw fa-envelope"></i> Email</a>
+  <a href="ManagerView Help.jsp"><i class="fa fa-question-circle"></i> Help</a>
 
 
 
