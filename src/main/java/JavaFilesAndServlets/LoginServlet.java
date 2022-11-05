@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
 		if(Login.validate(username, password)) {
 			
 			if(Login.getRole(username).equals(("admin"))|Login.getRole(username).equals(("administrator"))) {
-				RequestDispatcher rd=request.getRequestDispatcher("AdminView.html");
+				RequestDispatcher rd=request.getRequestDispatcher("AdminView.jsp");
 		        rd.forward(request,response);  
 			}
 			else if(Login.getRole(username).equals("manager")) {
@@ -55,12 +55,12 @@ public class LoginServlet extends HttpServlet {
 		        rd.forward(request,response);  
 			}
 			else if(Login.getRole(username).equals("accountant")) {
-				RequestDispatcher rd=request.getRequestDispatcher("AccountantView.html");
+				RequestDispatcher rd=request.getRequestDispatcher("AccountantView.jsp");
 				rd.forward(request,response);
 			}
 
 			else {
-				RequestDispatcher rd=request.getRequestDispatcher("RegularView.html");  
+				RequestDispatcher rd=request.getRequestDispatcher("RegularView.jsp");
 		        rd.forward(request,response);  
 
 			}
@@ -69,7 +69,7 @@ public class LoginServlet extends HttpServlet {
 		
 		else{  
 	        System.out.print("Sorry username or password error");  
-	        RequestDispatcher rd=request.getRequestDispatcher("index.html");  
+	        RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
 	        rd.include(request,response);  
 	    }
 		 

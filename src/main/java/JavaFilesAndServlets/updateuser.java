@@ -30,13 +30,13 @@ public class updateuser extends HttpServlet {
             System.out.println(request.getParameter("pageName"));
 
             if(request.getParameter("pageName").equals("admin")){
-                RequestDispatcher rd=request.getRequestDispatcher("AdminView Confirmation Screen.html");
+                RequestDispatcher rd=request.getRequestDispatcher("AdminView Confirmation Screen.jsp");
                 rd.forward(request,response);
             } else if (request.getParameter("pageName").equals("manager")) {
-                RequestDispatcher rd=request.getRequestDispatcher("ManagerView Confirmation Screen.html");
+                RequestDispatcher rd=request.getRequestDispatcher("ManagerView Confirmation Screen.jsp");
                 rd.forward(request,response);
             } else if (request.getParameter("pageName").equals("accountant")) {
-                RequestDispatcher rd=request.getRequestDispatcher("AccountantView Confirmation Screen.html");
+                RequestDispatcher rd=request.getRequestDispatcher("AccountantView Confirmation Screen.jsp");
                 rd.forward(request,response);
             }
 
