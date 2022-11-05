@@ -10,46 +10,79 @@ body{
     height: 92px;
     }
 
+/* Email Styles */
 
- .container2{
-
-      text-align: center;
-
+        .emailslots{
+            margin:auto;
+            text-align: center;
+              width: 75%;
         }
+
+        textarea {
+          width: 41%;
+          height: 150px;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          border: 1.2px solid #ccc;
+          border-radius: 2px;
+          border-color: #141414;
+          background-color: #f8f8f8;
+          font-size: 14px;
+          resize: none;
+          transition: all .2s ease;
+        }
+        textarea:focus {
+          /*width: 50%;*/
+          height: 150px;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          border: 1.2px solid #ccc;
+          border-radius: 2px;
+          border-color: #FDBB30;
+          background-color: #f8f8f8;
+          font-size: 14px;
+          resize: none;
+        }
+
+            input{
+
+            border: 1.2px solid #ccc;
+            border-radius: 2px;
+            border-color: #141414;
+            width: 20%;
+            height: 30px;
+            transition: all .2s ease;
+
+            }
+            input:focus{
+
+                border: 1.2px solid #ccc;
+                border-color: #FDBB30;
+
+
+                }
+
+                .button{
+         box-sizing: border-box;
+                width: 200px;
+                height: 39px;
+                left: 542px;
+                top: 621px;
+                border: 1.2px
+                solid #141414;
+                background: #141414;
+                border-radius: 7px;
+                color: white;
+                    font-size: 13px; }
+
+
+
 
  h1{
     text-align: center;
     font-weight: 500;
     font-size: 30px;
     }
-
-    input{
-
-      border: 1.2px solid #141414;
-      border-radius: 2px;
-          width: 25%;
-          height: 30px;
-
-    }
-
-
-
-        h1{
-        text-align: center;
-       left: 460px;
-       top: 156px;
-        }
-
-        h2{
-
-        position: absolute;
-        left: 460px;
-        top: 200px;
-        font-weight: normal;
-        font-size: 20px;
-
-
-        }
 
 
 
