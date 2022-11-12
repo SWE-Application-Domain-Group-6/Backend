@@ -60,7 +60,7 @@ public class LoginServlet extends HttpServlet {
 			}
 
 			else {
-				RequestDispatcher rd=request.getRequestDispatcher("RegularView.jsp");
+				RequestDispatcher rd=request.getRequestDispatcher("AccountantView.jsp");
 		        rd.forward(request,response);  
 
 			}
