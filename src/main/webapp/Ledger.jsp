@@ -20,7 +20,10 @@
 
 <%
     //need to get accid of selected account from frontend
-    int accid = 1;
+    Accounts a2;
+    session = request.getSession();
+    a2 = (Accounts)session.getAttribute("a2");
+    int accid = a2.getAccountID();
     //= Integer.valueOf(request.getParameter(""));
     //String[] entries = j1.getJournalEntries(accid); %>
 
@@ -57,8 +60,8 @@
     <h3>Journal Entries</h3>
     <table>
         <tr>
-            <th>Date</th>
             <th>Entry</th>
+            <th>Date</th>
             <th>Debit</th>
             <th>Credit</th>
         </tr>

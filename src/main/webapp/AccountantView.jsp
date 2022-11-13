@@ -16,6 +16,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
+<style>
+  tr[data-href]{
+    cursor: pointer;
+  }
+</style>
+
 <body>
 <body style="background-color:#ECECEE;">
 
@@ -50,121 +57,53 @@
 <div class="coachart">
   <br/> <br/>
 
+
+
   <h3>Chart of Accounts</h3>
   <table>
     <tr>
-      <th>Account #</th>
+      <th>Account ID</th>
       <th>Account Name</th>
-      <th>Account Category</th>
+      <th>Account Description</th>
     </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+
+    <%
+      Accounts a1 = new Accounts();
+      a1.getAllAccounts();
+      for(int i = 0; i < a1.accountList.size(); i++) {
+        Accounts a2 = a1.accountList.getAccount(i);
+        session.setAttribute("a2", a2);
+    %>
+
+    <tr data-href="http://localhost:8080/Backend/Ledger.jsp">
+      <td><%=a2.getAccountID()%></td>
+      <td><%=a2.getName()%></td>
+      <td><%=a2.getDescription()%></td>
 
     </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
 
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
+    <%
+      }
+    %>
 
   </table>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const rows = document.querySelectorAll("tr[data-href]");
+
+        rows.forEach(row =>{
+          row.addEventListener("click", () => {
+            window.location.href = row.dataset.href;
+          });
+        });
+      });
+    </script>
 
 
 </div>
 
-<div class="journalentries">
-  <br/> <br/>
 
-  <h3>Journal Entries</h3>
-  <table>
-    <tr>
-      <th>Date</th>
-      <th>Entry</th>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-
-    </tr>
-
-  </table>
-
-</div>
 </div>
 
 
