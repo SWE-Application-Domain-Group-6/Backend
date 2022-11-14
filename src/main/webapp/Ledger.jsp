@@ -20,10 +20,10 @@
 
 <%
     //need to get accid of selected account from frontend
-    Accounts a2;
-    session = request.getSession();
-    a2 = (Accounts)session.getAttribute("a2");
-    int accid = a2.getAccountID();
+    //Accounts a2;
+    //session = request.getSession();
+    //a2 = (Accounts)session.getAttribute("a2");
+    int accid = Integer.parseInt(request.getParameter("acctID"));
     //= Integer.valueOf(request.getParameter(""));
     //String[] entries = j1.getJournalEntries(accid); %>
 

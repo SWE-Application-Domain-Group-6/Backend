@@ -75,7 +75,7 @@
         session.setAttribute("a2", a2);
     %>
 
-    <tr data-href="http://localhost:8080/Backend/Ledger.jsp">
+    <tr data-href="http://localhost:8080/Backend/Ledger.jsp?acctID=<%=a2.getAccountID()%>">
       <td><%=a2.getAccountID()%></td>
       <td><%=a2.getName()%></td>
       <td><%=a2.getDescription()%></td>
