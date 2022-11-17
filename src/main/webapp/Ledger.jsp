@@ -23,7 +23,8 @@
     //Accounts a2;
     //session = request.getSession();
     //a2 = (Accounts)session.getAttribute("a2");
-    int accid = Integer.parseInt(request.getParameter("acctID"));
+    int accid = 1;
+            //Integer.parseInt(request.getParameter("acctID"));
     //= Integer.valueOf(request.getParameter(""));
     //String[] entries = j1.getJournalEntries(accid); %>
 
@@ -69,7 +70,6 @@
         <%
             JournalEntry j1 = new JournalEntry();
             j1.getJournalEntries(accid);
-            System.out.println("here");
             for(int i = 0; i < j1.journalEntryList.size(); i++) {
                 JournalEntry j2 = j1.journalEntryList.getJournalEntry(i);
 
@@ -135,6 +135,16 @@
 <img src="user icon.png" alt="user icon" class="usericon">
 
 
+<div class="clearfix">
+    <a href="Event Log.jsp"><i class="fa fa-fw fa-envelope"></i> History</a>
+</div>
+
+<form action = "UploadServlet" method = "post"
+      enctype = "multipart/form-data">
+    <input type = "file" name = "file" size = "50" />
+    <br />
+    <input type = "submit" value = "Upload File" />
+</form>
 
 </body>
 </html>
