@@ -10,20 +10,70 @@ body{
 
     }
 
+
+
+/* button styles */
+
     .button{
     margin: auto;
+     text-align: center;
+     box-sizing: border-box;
+     width: 230px;
+     height: 50px;
+     background: #FDBB30;
+     border-radius: 100px;
+     color: white;
+     font-size: 13px;
+     }
+
+   .approvebtn{
         text-align: center;
+        background: #FDBB30;
+        border-radius: 7px;
+        color: black;
+   }
 
-             box-sizing: border-box;
-                    width: 230px;
-                    height: 50px;
-                    background: #FDBB30;
-                    border-radius: 7px;
-                    color: white;
-                        font-size: 13px; }
+    .rejectbtn{
+           text-align: center;
+           background: #FDBB30;
+           border-radius: 7px;
+           color: black;
+      }
 
 
-.chartofaccounts{
+
+/* table styles */
+
+ table {
+   background-color: #F9F9F9;
+
+     font-weight: 100;
+
+ margin-left: auto;
+   margin-right: auto;
+   border-collapse: collapse;
+   width: 100%;
+ }
+
+ td, th {
+   border: 0px solid #dddddd;
+   text-align: left;
+   padding: 16px;
+ }
+
+
+ td:hover{
+     background-color: #ECECEC;
+     }
+
+ tr:nth-child(even) {
+   background-color: #dddddd;
+      border: 1px solid #BDBDBD;
+
+ }
+
+
+.journalentries{
 
   margin:auto;
    margin-top: 18%;
@@ -34,24 +84,30 @@ body{
 
     }
 
+.pendingentries{
+     margin:auto;
+     margin-top: 5%;
+     width: 75%;
+     background: #272727;
+     text-align: center;
+     color: black;
+ }
 
+.rejectedentries{
+     margin:auto;
+     margin-top: 1%;
+     width: 75%;
+     background: #272727;
+     text-align: center;
+     color: black;
+    }
 
-   .journalentries{
-
-    margin:auto;
-       margin-top: 1%;
-
-       width: 75%;
-       background: #272727;
-        text-align: center;
-        color: black;
-                }
 
 
 
 /* header styles */
 
-    h1{
+h1{
     font-weight: 1;
     font-size: 30px;
          position: absolute;
@@ -59,7 +115,7 @@ body{
                top: 156px;
     }
 
-        h2{
+h2{
 
         position: absolute;
         left: 460px;
@@ -76,9 +132,7 @@ h3{
         color: white;
        }
 
-
-
-       h4{
+h4{
        position: absolute;
        left: 1500px;
        top: 35px;
@@ -89,17 +143,18 @@ h3{
 
        }
 
+h5{
+   position: absolute;
+   left: 1511px;
+   top: 52px;
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 20px;
+   color: #FDBB30;
 
-        h5{
-                            position: absolute;
-                            left: 1511px;
-                            top: 52px;
-                            font-weight: 700;
-                            font-size: 12px;
-                            line-height: 20px;
-                            color: #FDBB30;
+    }
 
-                            }
+
 
     .usericon{
     position: absolute;
@@ -169,25 +224,3 @@ h3{
 
 
 /* table style */
- table {
-   background-color: #F9F9F9;
-
-     font-weight: 100;
-
- margin-left: auto;
-   margin-right: auto;
-   border-collapse: collapse;
-   width: 100%;
- }
-
- td, th {
-   border: 0px solid #dddddd;
-   text-align: left;
-   padding: 16px;
- }
-
- tr:nth-child(even) {
-   background-color: #dddddd;
-      border: 1px solid #BDBDBD;
-
- }
