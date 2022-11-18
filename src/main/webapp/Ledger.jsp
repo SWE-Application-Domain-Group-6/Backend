@@ -23,8 +23,7 @@
     //Accounts a2;
     //session = request.getSession();
     //a2 = (Accounts)session.getAttribute("a2");
-    int accid = 1;
-            //Integer.parseInt(request.getParameter("acctID"));
+    int accid = Integer.parseInt(request.getParameter("acctID"));
     //= Integer.valueOf(request.getParameter(""));
     //String[] entries = j1.getJournalEntries(accid); %>
 
@@ -79,8 +78,6 @@
             <td><%=j2.getDate()%></td>
             <td><%=j2.getDebit()%></td>
             <td><%=j2.getCredit()%></td>
-
-
         </tr>
         <%
             }
