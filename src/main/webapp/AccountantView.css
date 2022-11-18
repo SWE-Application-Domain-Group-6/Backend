@@ -38,15 +38,31 @@ body{
 
    .journalentries{
 
-    margin:auto;
-       margin-top: 1%;
+   margin:auto;
+    margin-top: 18%;
+    width: 75%;
+    background: #272727;
+     text-align: center;
+     color: black;
+}
 
-       width: 75%;
-       background: #272727;
-        text-align: center;
-        color: black;
-                }
+.pendingentries{
+     margin:auto;
+     margin-top: 5%;
+     width: 75%;
+     background: #272727;
+     text-align: center;
+     color: black;
+ }
 
+.rejectedentries{
+     margin:auto;
+     margin-top: 1%;
+     width: 75%;
+     background: #272727;
+     text-align: center;
+     color: black;
+    }
 
 
 /* header styles */
@@ -190,6 +206,10 @@ h3{
 
 
  }
+
+  td:hover{
+      background-color: #ECECEC;
+      }
 
  tr:nth-child(even) {
    background-color: #dddddd;
