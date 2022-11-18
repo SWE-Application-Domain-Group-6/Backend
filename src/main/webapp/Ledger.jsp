@@ -23,8 +23,7 @@
     //Accounts a2;
     //session = request.getSession();
     //a2 = (Accounts)session.getAttribute("a2");
-    int accid = 1;
-            //Integer.parseInt(request.getParameter("acctID"));
+    int accid = Integer.parseInt(request.getParameter("acctID"));
     //= Integer.valueOf(request.getParameter(""));
     //String[] entries = j1.getJournalEntries(accid); %>
 
@@ -74,18 +73,31 @@
                 JournalEntry j2 = j1.journalEntryList.getJournalEntry(i);
 
         %>
-        <tr>
+        <tr data-href="http://localhost:8080/Backend/Event Log.jsp?acctID=<%=j2.getAccountID()%>">
             <td><%=j2.getEntryNum()%></td>
             <td><%=j2.getDate()%></td>
             <td><%=j2.getDebit()%></td>
             <td><%=j2.getCredit()%></td>
 
-
         </tr>
+
+
         <%
             }
         %>
     </table>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const rows = document.querySelectorAll("tr[data-href]");
+
+            rows.forEach(row =>{
+                row.addEventListener("click", () => {
+                    window.location.href = row.dataset.href;
+                });
+            });
+        });
+    </script>
+
     <tr>
         <td></td>
         <td></td>
@@ -138,6 +150,8 @@
 <div class="clearfix">
     <a href="Event Log.jsp"><i class="fa fa-fw fa-envelope"></i> History</a>
 </div>
+
+
 
 <form action = "UploadServlet" method = "post"
       enctype = "multipart/form-data">

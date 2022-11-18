@@ -23,7 +23,7 @@
   //Accounts a2;
   //session = request.getSession();
   //a2 = (Accounts)session.getAttribute("a2");
-  int accid = 1;
+  int accid = Integer.parseInt(request.getParameter("acctID"));
   //Integer.parseInt(request.getParameter("acctID"));
   //= Integer.valueOf(request.getParameter(""));
   //String[] entries = j1.getJournalEntries(accid); %>
@@ -58,13 +58,14 @@
 <div class="coachart">
   <br/> <br/>
 
-  <h3>Journal Entries</h3>
+  <h3>Event Log</h3>
   <table>
     <tr>
-      <th>Entry</th>
-      <th>Date</th>
-      <th>Debit</th>
-      <th>Credit</th>
+      <th>AccountID</th>
+      <th>ChangeID</th>
+      <th>Attribute</th>
+      <th>Value</th>
+      <th>User</th>
     </tr>
 
     <%
@@ -75,11 +76,11 @@
 
     %>
     <tr>
-      <td><%=e2.getUserID()%></td>
-      <td><%=e2.getDob()%></td>
-      <td><%=e2.getFname()%></td>
-      <td><%=e2.getLname()%></td>
-
+      <td><%=e2.getAccountID()%></td>
+      <td><%=e2.getChangeID()%></td>
+      <td><%=e2.getAttribute()%></td>
+      <td><%=e2.getValue()%></td>
+      <td><%=e2.getUser()%></td>
 
     </tr>
     <%
