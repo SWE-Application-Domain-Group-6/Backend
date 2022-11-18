@@ -18,12 +18,12 @@
 
 <!-- The sidebar -->
 <div class="sidebar">
-    <a class="active" href="AccountantView.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a class="active" href="AccountantView.jsp"><i class="fa fa-fw fa-home"></i> Home</a>
     <!-- <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> -->
-    <a href="AccountantView View Users.html"><i class="fa fa-fw fa fa-users"></i> View Users</a>
-    <!--  <a href="AccountantView Assign Roles.html"><i class="fa fa-fw fa-user"></i> Assign Roles</a> -->
-      <a href="AccountantView Email.html"><i class="fa fa-fw fa-envelope"></i> Email</a>
-      <a href="AccountantView Help.html"><i class="fa fa-question-circle"></i> Help</a>
+    <a href="AccountantView View Users.jsp"><i class="fa fa-fw fa fa-users"></i> View Users</a>
+    <!--  <a href="AccountantView Assign Roles.jsp"><i class="fa fa-fw fa-user"></i> Assign Roles</a> -->
+      <a href="AccountantView Email.jsp"><i class="fa fa-fw fa-envelope"></i> Email</a>
+      <a href="AccountantView Help.jsp"><i class="fa fa-question-circle"></i> Help</a>
 
 
 
@@ -31,7 +31,7 @@
 
 <div class="main">
 
-  <div class="chartofaccounts">
+  <!--<div class="chartofaccounts">
       <h3><br>Chart of Accounts</h3>
       <table>
           <tr>
@@ -79,7 +79,7 @@
 
 
 
-  </div>
+  </div> -->
 
 
     <div class="journalentries">
@@ -87,47 +87,186 @@
 
         <h3><br>Journal Entries</h3>
 
-    <table>
-        <tr>
-            <th>Date</th>
-            <th>Entry</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Entry</th>
+                <th>Debit</th>
+                <th>Credit</th>
 
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
 
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
 
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
 
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
 
-        </tr>
+            </tr>
 
-
-    </table>
+        </table>
 
     </div>
+
+    <div class="pendingentries">
+
+
+        <h3><br>Pending Entries</h3>
+
+        <table>
+            <tr>
+                <th>Entry ID</th>
+                <th>Date Submitted</th>
+                <th>Submitted By</th>
+                <th>Description</th>
+                <th>Accounts Debited</th>
+                <th>Accounts Credited</th>
+                <th>Attachment</th>
+
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="rejectedentries">
+
+
+        <h3><br>Rejected Entries</h3>
+
+        <table>
+            <tr>
+                <th>Entry ID</th>
+                <th>Date Submitted</th>
+                <th>Submitted By</th>
+                <th>Rejected By</th>
+                <th>Description</th>
+                <th>Accounts Debited</th>
+                <th>Accounts Credited</th>
+                <th>Attachment</th>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+
     <div class="button"
-    <button> <a href="AccountantView Journal Entry.html" style="color:black"> <BR>CREATE JOURNAL ENTRY</button>
+    <button> <a href="AccountantView Journal Entry.jsp" style="color:black"> <BR>CREATE JOURNAL ENTRY</button>
     </div>
 <br>
 <div class="button"
-<button> <a href="AccountantView COA.html" style="color:black"> <BR>CREATE CHART OF ACCOUNTS</button>
+<button> <a href="AccountantView COA.jsp" style="color:black"> <BR>CREATE CHART OF ACCOUNTS</button>
 </div>
 <br>
 
