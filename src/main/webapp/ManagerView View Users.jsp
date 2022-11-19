@@ -52,64 +52,23 @@
         <th>Address</th>
 
       </tr>
+      <%
+        User u1 = new User();
+        u1.getAllUsers();
+        for(int i = 0; i < u1.userList.size(); i++) {
+          User u2 = u1.userList.getUser(i);
+      %>
       <tr>
-        <td>username1</td>
-        <td>Maria</td>
-        <td>Anders</td>
-        <td>MM/DD/YYYY</td>
-        <td>123 Address St</td>
+        <td><%=u2.getEmail()%></td>
+        <td><%=u2.getFname()%></td>
+        <td><%=u2.getLname()%></td>
+        <td><%=u2.getDob()%></td>
+        <td><%=u2.getAddress()%></td>
 
       </tr>
-      <tr>
-        <td>username2</td>
-        <td>Francisco</td>
-        <td>Chang</td>
-        <td>MM/DD/YYYY</td>
-        <td>123 Address St</td>
-      </tr>
-      <tr>
-        <td>username3</td>
-        <td>Roland</td>
-        <td>Mendel</td>
-        <td>MM/DD/YYYY</td>
-        <td>123 Address St</td>
-      </tr>
-      <tr>
-        <td>username4</td>
-        <td>Helen</td>
-        <td>Bennett</td>
-        <td>MM/DD/YYYY</td>
-        <td>123 Address St</td>
-      </tr>
-      <tr>
-        <td>username5</td>
-        <td>Yoshi</td>
-        <td>Tannamuri</td>
-        <td>MM/DD/YYYY</td>
-        <td>123 Address St</td>
-      </tr>
-      <tr>
-        <td>username6</td>
-        <td>Giovanni</td>
-        <td>Rovelli</td>
-        <td>MM/DD/YYYY</td>
-        <td>123 Address St</td>
-      </tr>
-      <tr>
-        <td>username7</td>
-        <td>Giovanna</td>
-        <td>Rovelli</td>
-        <td>MM/DD/YYYY</td>
-        <td>123 Address St</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-
-      </tr>
+      <%
+        }
+      %>
 
     </table>
 

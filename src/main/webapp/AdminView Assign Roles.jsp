@@ -49,7 +49,7 @@
   </div> <br/>
   <input type="date" name="date_picker">
 
-  <form name="admin" method="post" action="updateuser">
+  <form name="admin" method="post" action="JavaFilesAndServlets.updateuser">
     <input type="hidden" name="pageName" value="admin" />
     <img src="ksu books logo.png" alt="ksu books logo">
     <h1>Assign Roles</h1>
