@@ -8,6 +8,7 @@ import java.sql.Statement;
 public class Event {
     String attribute, value, date, user;
     int changeID,accountID;
+    public EventList eventList = new EventList();
 
     public int getAccountID() {return accountID;}
 
@@ -39,7 +40,7 @@ public class Event {
 
     public void setEventList(EventList eventList) {this.eventList = eventList;}
 
-    public EventList eventList = new EventList();
+
 
     public Event(){}
 
@@ -76,7 +77,7 @@ public class Event {
                 e1.setDate(resultSet.getString(4));
                 e1.setAttribute(resultSet.getString(5));
                 e1.setValue(resultSet.getString(6));
-                EventList.addEvent(e1);
+                eventList.addEvent(e1);
             }
 
         } catch (SQLException ex) {

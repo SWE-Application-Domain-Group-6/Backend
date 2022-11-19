@@ -37,12 +37,12 @@
 
 <!-- The sidebar -->
 <div class="sidebar">
-  <a class="active" href="AccountantView.html"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a class="active" href="AccountantView.jsp"><i class="fa fa-fw fa-home"></i> Home</a>
   <!-- <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> -->
-  <a href="AccountantView View Users.html"><i class="fa fa-fw fa fa-users"></i> View Users</a>
+  <a href="AccountantView View Users.jsp"><i class="fa fa-fw fa fa-users"></i> View Users</a>
   <!--  <a href="AccountantView Assign Roles.html"><i class="fa fa-fw fa-user"></i> Assign Roles</a> -->
-  <a href="AccountantView Email.html"><i class="fa fa-fw fa-envelope"></i> Email</a>
-  <a href="AccountantView Help.html"><i class="fa fa-question-circle"></i> Help</a>
+  <a href="AccountantView Email.jsp"><i class="fa fa-fw fa-envelope"></i> Email</a>
+  <a href="AccountantView Help.jsp"><i class="fa fa-question-circle"></i> Help</a>
 
 
 
@@ -86,43 +86,6 @@
     <%
       }
     %>
-  </table>
-  <tr>
-    <td></td>
-    <td></td>
-
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-
-  </tr>
-
   </table>
 
 </div>

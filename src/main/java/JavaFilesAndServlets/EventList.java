@@ -3,21 +3,21 @@ package JavaFilesAndServlets;
 import java.util.ArrayList;
 
 public class EventList {
-    public static ArrayList<Event> EventList = new ArrayList<>();
+    public ArrayList<Event> eventList = new ArrayList<>();
 
     public Event getEvent(int index){
-        Event e1 = EventList.get(index);
+        Event e1 = eventList.get(index);
         return e1;
     }
-    public static void addEvent(Event e1){
-        EventList.add(e1);
+    public void addEvent(Event e1){
+        eventList.add(e1);
     }
     public int size(){
-        return EventList.size();
+        return eventList.size();
     }
     public void display(){
-        for(int i = 0; i < EventList.size(); i++){
-            EventList.get(i).display();
+        for(int i = 0; i < eventList.size(); i++){
+            eventList.get(i).display();
         }
     }
 
