@@ -35,43 +35,51 @@
 
 
 <div class="main">
-  <form action="action_page.php">
 
     <img src="ksu books logo.png" alt="ksu books logo">
     <h1>Assign Roles</h1>
+    <form name="manager" method="post" action="JavaFilesAndServlets.updateuser">
+      <input type="hidden" name="pageName" value="admin" />
+      <img src="ksu books logo.png" alt="ksu books logo">
+      <h1>Assign Roles</h1>
 
 
-    <div class="container2">
+      <div class="container2">
 
-      <br/>
+        <br/>
 
-      <label><b>Username</b></label><br/>
-      <input type="username" placeholder="Enter username" name="usn" required>
-      <br/> <br/> <br/>
-
-
-      <label><b>New Role</b></label><br/>
-
-      <select name="newrole" id="newrole" >
-        <option value="administrator">Administrator</option>
-        <option value="manager">Manager</option>
-        <option value="regular">Regular</option>
-      </select>
-      <br/>    <br/>  <br/>
+        <label><b>Username</b></label><br/>
+        <input type="username" placeholder="Enter username" name="usn" required>
+        <br/> <br/> <br/>
 
 
+        <label><b>New Role</b></label><br/>
+
+        <select name="newrole" id="newrole" >
+          <option value="admin">Administrator</option>
+          <option value="manager">Manager</option>
+          <option value="accountant">Accountant</option>
+          <option value="regular">Regular</option>
+        </select>
+        <br/>    <br/>  <br/>
 
 
-      <div class="clearfix">
-        <button type="submit" class="submitbtn">SUBMIT</button>
+
+
+        <div class="clearfix">
+          <button type="submit" class="submitbtn">SUBMIT</button>
+
+
+        </div>
+
 
 
       </div>
+    </form>
 
 
 
 
-  </form>
 
 </div>
 

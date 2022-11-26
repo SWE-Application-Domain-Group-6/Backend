@@ -1,12 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  JavaFilesAndServlets.User: ander
-  Date: 11/1/2022
-  Time: 10:37 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page import="JavaFilesAndServlets.*"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="JavaFilesAndServlets.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,76 +31,194 @@
 </div>
 
 
-<div class="container2">
+<div class="main">
 
+
+
+  <div class="journalentries">
+
+
+    <h3><br>Journal Entries</h3>
+
+    <table>
+      <tr>
+        <th>Entry Number</th>
+        <th>Account ID</th>
+        <th>Date</th>
+        <th>Account Name</th>
+        <th>Debit</th>
+        <th>Credit</th>
+      </tr>
+
+
+    </table>
+
+  </div>
+
+  <div class="pendingentries">
+
+
+    <h3><br>Pending Entries</h3>
+
+    <table>
+      <tr>
+        <th>Entry Number</th>
+        <th>Account ID</th>
+        <th>Date</th>
+        <th>Account Name</th>
+        <th>Debit</th>
+        <th>Credit</th>
+      </tr>
+      <%
+        JournalEntry j1 = new JournalEntry();
+        j1.getJournalEntries(1);
+        for (int i = 0; i < j1.journalEntryList.size(); i++){
+          JournalEntry t1 = j1.journalEntryList.getJournalEntry(i);
+      %>
+      <tr>
+        <td><%=t1.getEntryNum()%></td>
+        <td><%=t1.getAccountID()%></td>
+        <td><%=t1.getDate()%></td>
+        <td><%=t1.getAccountName()%></td>
+        <td><%=t1.getDebit()%></td>
+        <td><%=t1.getCredit()%></td>
+        <td>
+          <button class="approvebtn">Approve</button>
+          <button class="rejectbtn">Reject</button>
+        </td>
+      <%
+        }
+      %>
+
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <button class="approvebtn">Approve</button>
+          <button class="rejectbtn">Reject</button>
+        </td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <button class="approvebtn">Approve</button>
+          <button class="rejectbtn">Reject</button>
+        </td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <button class="approvebtn">Approve</button>
+          <button class="rejectbtn">Reject</button>
+        </td>
+
+      </tr>
+
+    </table>
+
+  </div>
+
+  <div class="rejectedentries">
+
+
+    <h3><br>Rejected Entries</h3>
+
+    <table>
+      <tr>
+        <th>Entry ID</th>
+        <th>Date Submitted</th>
+        <th>Submitted By</th>
+        <th>Rejected By</th>
+        <th>Description</th>
+        <th>Accounts Debited</th>
+        <th>Accounts Credited</th>
+        <th>Attachment</th>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+
+    </table>
+
+  </div>
+
+
+
+
+  </br>
+  <div class="button"
+  <button> <a href="ManagerView Journal Entry.jsp" style="color:black"> <BR>CREATE JOURNAL ENTRY</button>
 </div>
-
-<img src="coa gold.png" alt="coagold" class="coagold">
-<img src="je green.png" alt="jegreen" class="jegreen">
-
-
-
-<div class="coachart">
-  <br/> <br/>
-
-  <h3>Chart of Accounts</h3>
-  <table>
-    <tr>
-      <th>Account #</th>
-      <th>Account Name</th>
-      <th>Account Category</th>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
-
-
-
+<br>
+<div class="button"
+<button> <a href="ManagerView COA.jsp" style="color:black"> <BR>CREATE CHART OF ACCOUNTS</button>
 </div>
-
-<div class="journalentries">
-  <br/> <br/>
-
-  <h3>Journal Entries</h3>
-  <table>
-    <tr>
-      <th>Entry Number</th>
-      <th>Account ID</th>
-      <th>Date</th>
-      <th>Account Name</th>
-      <th>Debit</th>
-      <th>Credit</th>
-    </tr>
-    <%
-      JournalEntry j1 = new JournalEntry();
-      j1.getJournalEntries(1);
-      for (int i = 0; i < j1.journalEntryList.size(); i++){
-        JournalEntry t1 = j1.journalEntryList.getJournalEntry(i);
-    %>
-    <tr>
-      <td><%=t1.getEntryNum()%></td>
-      <td><%=t1.getAccountID()%></td>
-      <td><%=t1.getDate()%></td>
-      <td><%=t1.getAccountName()%></td>
-      <td><%=t1.getDebit()%></td>
-      <td><%=t1.getCredit()%></td>
-    </tr>
-    <%
-      }
-    %>
-  </table>
-
-</div>
-</div>
+<br>
 
 
-</div>
-
-
-</div>
 
 <h4> Username</h4>
 <h5>MANAGER</h5>
