@@ -38,7 +38,7 @@
   <div class="journalentries">
 
 
-    <h3><br>Journal Entries</h3>
+    <h3><br>All Journal Entries</h3>
 
     <table>
       <tr>
@@ -49,8 +49,27 @@
         <th>Debit</th>
         <th>Credit</th>
       </tr>
-
-
+      <%
+        JournalEntry j1 = new JournalEntry();
+        j1.getAllJournalEntries();
+        for (int i = 0; i < j1.journalEntryList.size(); i++){
+          JournalEntry t1 = j1.journalEntryList.getJournalEntry(i);
+      %>
+      <tr>
+        <td><%=t1.getEntryNum()%></td>
+        <td><%=t1.getAccountID()%></td>
+        <td><%=t1.getDate()%></td>
+        <td><%=t1.getAccountName()%></td>
+        <td><%=t1.getDebit()%></td>
+        <td><%=t1.getCredit()%></td>
+        <td>
+          <button class="approvebtn">Approve</button>
+          <button class="rejectbtn">Reject</button>
+        </td>
+        <%
+          }
+        %>
+      </tr>
     </table>
 
   </div>
@@ -70,18 +89,18 @@
         <th>Credit</th>
       </tr>
       <%
-        JournalEntry j1 = new JournalEntry();
-        j1.getJournalEntries(1);
-        for (int i = 0; i < j1.journalEntryList.size(); i++){
-          JournalEntry t1 = j1.journalEntryList.getJournalEntry(i);
+        JournalEntry j2 = new JournalEntry();
+        j2.getPendingJournalEntries();
+        for (int i = 0; i < j2.journalEntryList.size(); i++){
+          JournalEntry t2 = j2.journalEntryList.getJournalEntry(i);
       %>
       <tr>
-        <td><%=t1.getEntryNum()%></td>
-        <td><%=t1.getAccountID()%></td>
-        <td><%=t1.getDate()%></td>
-        <td><%=t1.getAccountName()%></td>
-        <td><%=t1.getDebit()%></td>
-        <td><%=t1.getCredit()%></td>
+        <td><%=t2.getEntryNum()%></td>
+        <td><%=t2.getAccountID()%></td>
+        <td><%=t2.getDate()%></td>
+        <td><%=t2.getAccountName()%></td>
+        <td><%=t2.getDebit()%></td>
+        <td><%=t2.getCredit()%></td>
         <td>
           <button class="approvebtn">Approve</button>
           <button class="rejectbtn">Reject</button>
@@ -89,51 +108,8 @@
       <%
         }
       %>
-
-        </td>
       </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-          <button class="approvebtn">Approve</button>
-          <button class="rejectbtn">Reject</button>
-        </td>
 
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-          <button class="approvebtn">Approve</button>
-          <button class="rejectbtn">Reject</button>
-        </td>
-
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-          <button class="approvebtn">Approve</button>
-          <button class="rejectbtn">Reject</button>
-        </td>
-
-      </tr>
 
     </table>
 
@@ -154,39 +130,6 @@
         <th>Accounts Debited</th>
         <th>Accounts Credited</th>
         <th>Attachment</th>
-
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
 
       </tr>
       <tr>

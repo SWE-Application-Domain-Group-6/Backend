@@ -90,6 +90,87 @@ public class JournalEntry {
         }//Establishing connection
     }
 
+    public void getAllJournalEntries()throws SQLException{
+        String sqlStatement = ("select * from journal_entries");
+        Statement statement;
+        ResultSet resultSet;
+        try {
+            dbConnector db =  new dbConnector();
+            Connection connection = db.dbConnector();
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sqlStatement);
+            while(resultSet.next()){
+                JournalEntry j1 = new JournalEntry();
+                j1.setEntryNum(resultSet.getInt(1));
+                j1.setAccountID(resultSet.getInt(2));
+                j1.setDate(resultSet.getString(3));
+                j1.setAccountName(resultSet.getString(4));
+                j1.setDebit(resultSet.getDouble(5));
+                j1.setCredit(resultSet.getDouble(6));
+                journalEntryList.addJournalEntry(j1);
+            }
+
+        } catch (SQLException ex) {
+            // TODO Auto-generated catch block
+            System.out.println("Error Connecting to DB");
+            ex.printStackTrace();
+        }//Establishing connection
+    }
+
+    public void getPendingJournalEntries()throws SQLException{
+        String sqlStatement = ("select * from journal_entries where status = 'pending'");
+        Statement statement;
+        ResultSet resultSet;
+        try {
+            dbConnector db =  new dbConnector();
+            Connection connection = db.dbConnector();
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sqlStatement);
+            while(resultSet.next()){
+                JournalEntry j1 = new JournalEntry();
+                j1.setEntryNum(resultSet.getInt(1));
+                j1.setAccountID(resultSet.getInt(2));
+                j1.setDate(resultSet.getString(3));
+                j1.setAccountName(resultSet.getString(4));
+                j1.setDebit(resultSet.getDouble(5));
+                j1.setCredit(resultSet.getDouble(6));
+                journalEntryList.addJournalEntry(j1);
+            }
+
+        } catch (SQLException ex) {
+            // TODO Auto-generated catch block
+            System.out.println("Error Connecting to DB");
+            ex.printStackTrace();
+        }//Establishing connection
+    }
+
+    public void getRejectedJournalEntries()throws SQLException{
+        String sqlStatement = ("select * from journal_entries where status = 'rejected'");
+        Statement statement;
+        ResultSet resultSet;
+        try {
+            dbConnector db =  new dbConnector();
+            Connection connection = db.dbConnector();
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sqlStatement);
+            while(resultSet.next()){
+                JournalEntry j1 = new JournalEntry();
+                j1.setEntryNum(resultSet.getInt(1));
+                j1.setAccountID(resultSet.getInt(2));
+                j1.setDate(resultSet.getString(3));
+                j1.setAccountName(resultSet.getString(4));
+                j1.setDebit(resultSet.getDouble(5));
+                j1.setCredit(resultSet.getDouble(6));
+                journalEntryList.addJournalEntry(j1);
+            }
+
+        } catch (SQLException ex) {
+            // TODO Auto-generated catch block
+            System.out.println("Error Connecting to DB");
+            ex.printStackTrace();
+        }//Establishing connection
+    }
+
     public void display(){
         System.out.println("Entry Number: " + entryNum);
         System.out.println("Account ID: " + accountID);
