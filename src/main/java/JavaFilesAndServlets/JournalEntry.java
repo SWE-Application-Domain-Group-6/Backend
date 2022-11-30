@@ -171,6 +171,22 @@ public class JournalEntry {
         }//Establishing connection
     }
 
+    public static void updateEntryStatus(int entryNum1, String status1)throws SQLException{
+        String sqlStatement = ("update journal_entries set status = '"+ status1 +"' where entryNum = '" + entryNum1 + "'");
+        Statement statement;
+        try {
+            dbConnector db =  new dbConnector();
+            Connection connection = db.dbConnector();
+            statement = connection.createStatement();
+            statement.executeUpdate(sqlStatement);
+
+        } catch (SQLException ex) {
+            // TODO Auto-generated catch block
+            System.out.println("Error Connecting to DB");
+            ex.printStackTrace();
+        }//Establishing connection
+    }
+
     public void display(){
         System.out.println("Entry Number: " + entryNum);
         System.out.println("Account ID: " + accountID);

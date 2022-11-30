@@ -62,10 +62,6 @@
         <td><%=t1.getAccountName()%></td>
         <td><%=t1.getDebit()%></td>
         <td><%=t1.getCredit()%></td>
-        <td>
-          <button class="approvebtn">Approve</button>
-          <button class="rejectbtn">Reject</button>
-        </td>
         <%
           }
         %>
@@ -93,6 +89,7 @@
         j2.getPendingJournalEntries();
         for (int i = 0; i < j2.journalEntryList.size(); i++){
           JournalEntry t2 = j2.journalEntryList.getJournalEntry(i);
+          int entryNum1 = t2.getEntryNum();
       %>
       <tr>
         <td><%=t2.getEntryNum()%></td>
@@ -130,25 +127,30 @@
         <th>Accounts Debited</th>
         <th>Accounts Credited</th>
         <th>Attachment</th>
-
       </tr>
+      <%
+        JournalEntry j3 = new JournalEntry();
+        j3.getRejectedJournalEntries();
+        for (int i = 0; i < j3.journalEntryList.size(); i++){
+          JournalEntry t3 = j3.journalEntryList.getJournalEntry(i);
+      %>
       <tr>
+        <td><%=t3.getEntryNum()%></td>
+        <td><%=t3.getDate()%></td>
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-
+        <td><%=t3.getDebit()%></td>
+        <td><%=t3.getCredit()%></td>
+        <td>Files To Be Uploaded</td>
+        <%
+          }
+        %>
       </tr>
 
     </table>
 
   </div>
-
-
 
 
   </br>

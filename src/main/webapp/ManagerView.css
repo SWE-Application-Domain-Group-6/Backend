@@ -62,7 +62,7 @@ td, th {
 }
 
 
-td:hover{
+tr:hover{
     background-color: #ECECEC;
 }
 
