@@ -98,10 +98,12 @@
         <td><%=t2.getAccountName()%></td>
         <td><%=t2.getDebit()%></td>
         <td><%=t2.getCredit()%></td>
+        <form action = "ManagerViewUpdateStatusServlet">
         <td>
-          <button class="approvebtn">Approve</button>
-          <button class="rejectbtn">Reject</button>
+          <button class="approvebtn" input type="submit" name="approvebtn">Approve</button>
+          <button class="rejectbtn" input type="submit" name="rejectbtn">Reject</button>
         </td>
+        </form>
       <%
         }
       %>
@@ -152,6 +154,11 @@
 
   </div>
 
+  <script>
+    function setStatusToApproved(entryNum){
+
+    }
+  </script>
 
   </br>
   <div class="button"
