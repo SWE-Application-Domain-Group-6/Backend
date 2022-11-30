@@ -90,6 +90,7 @@
         for (int i = 0; i < j2.journalEntryList.size(); i++){
           JournalEntry t2 = j2.journalEntryList.getJournalEntry(i);
           int entryNum1 = t2.getEntryNum();
+
       %>
       <tr>
         <td><%=t2.getEntryNum()%></td>
@@ -98,10 +99,10 @@
         <td><%=t2.getAccountName()%></td>
         <td><%=t2.getDebit()%></td>
         <td><%=t2.getCredit()%></td>
-        <form action = "ManagerViewUpdateStatusServlet">
+        <form name="UpdateJEStatusForm" method="post" action="ManagerViewUpdateStatusServlet" style="border:1px solid #ccc">
         <td>
-          <button class="approvebtn" input type="submit" name="approvebtn">Approve</button>
-          <button class="rejectbtn" input type="submit" name="rejectbtn">Reject</button>
+          <button class="approvebtn" input type="submit" name="approvebtn" value="<%=t2.getEntryNum()%>">Approve</button>
+          <button class="rejectbtn" input type="submit" name="rejectbtn" value="<%=t2.getEntryNum()%>">Reject</button>
         </td>
         </form>
       <%
