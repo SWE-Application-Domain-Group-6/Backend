@@ -73,7 +73,7 @@
   <div class="pendingentries">
 
 
-    <h3><br>Pending Entries</h3>
+    <h3  style="background-color:darkorange;"><br>Pending Entries</h3>
 
     <table>
       <tr>
@@ -93,7 +93,7 @@
 
       %>
       <tr>
-        <td><%=t2.getEntryNum()%></td>
+        <td ><%=t2.getEntryNum()%></td>
         <td><%=t2.getAccountID()%></td>
         <td><%=t2.getDate()%></td>
         <td><%=t2.getAccountName()%></td>
@@ -118,7 +118,7 @@
   <div class="rejectedentries">
 
 
-    <h3><br>Rejected Entries</h3>
+    <h3 style="background-color:red;"><br>Rejected Entries</h3>
 
     <table>
       <tr>

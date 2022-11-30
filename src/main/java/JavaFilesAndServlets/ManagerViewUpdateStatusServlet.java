@@ -26,10 +26,14 @@ public class ManagerViewUpdateStatusServlet extends HttpServlet {
             if (request.getParameter("approvebtn") != null) {
                 int entryNum = Integer.parseInt(request.getParameter("approvebtn"));
                 JournalEntry.updateEntryStatus(entryNum, "approved");
+                RequestDispatcher rd=request.getRequestDispatcher("ManagerView Confirmation Screen.jsp");
+                rd.forward(request,response);
             }
             if (request.getParameter("rejectbtn") != null) {
                 int entryNum = Integer.parseInt(request.getParameter("rejectbtn"));
                 JournalEntry.updateEntryStatus(entryNum, "rejected");
+                RequestDispatcher rd=request.getRequestDispatcher("ManagerView Confirmation Screen.jsp");
+                rd.forward(request,response);
             }
         }
         catch(SQLException ex){}
