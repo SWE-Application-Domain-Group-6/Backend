@@ -35,18 +35,21 @@
     <h1>Create Journal Entry</h1>
 
 
-
   </form>
+
+  <form name="CreateJEandCOA" method="post" action="ManagerViewUpdateJEandCOA" style="border:1px solid #ccc">
   <div class="emailslots"><br>
-    Debit Amount <br><input type="text" id="debit" placeholder="  Debit Amount"><br><br>
-    Credit Amount <br><input type="text" id="credit" placeholder="  Credit Amount"><br><br>
+    Debit Amount <br><input type="text" name ="debit" id="debit" placeholder="  Debit Amount"><br><br>
+    Credit Amount <br><input type="text" name="credit" id="credit" placeholder="  Credit Amount"><br><br>
     Booking Date (Entry Date) <br><input type="date" name="date_picker"><br><br>
     Notes <br><textarea id="msg" placeholder="Enter message"></textarea><br><br>
-    <button class="button" onclick="" >LOG JOURNAL ENTRY</button>
+    <button class="button" input type="submit" name="logJournalEntry">LOG JOURNAL ENTRY</button>
 
-    <p> <a href="ManagerView.html" style="color:black" >HOME </a></p>
+    <p> <a href="ManagerView.jsp" style="color:black" >HOME </a></p>
 
   </div>
+
+  </form>
 
 </div>
 

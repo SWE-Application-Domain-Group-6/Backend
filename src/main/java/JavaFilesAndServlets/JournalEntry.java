@@ -187,6 +187,23 @@ public class JournalEntry {
         }//Establishing connection
     }
 
+    public static void createJournalEntry(double debit, double credit, String date, int accountID, String status) throws SQLException{
+        String sqlStatement = ("insert into journal_entries values (DEFAULT, '" + accountID + "', '" + date + "', " + "NULL, " +
+                "'" + debit + "', '" + credit + "', '" + status + "')");
+        Statement statement;
+        try{
+            dbConnector db =  new dbConnector();
+            Connection connection = db.dbConnector();
+            statement = connection.createStatement();
+            statement.executeUpdate(sqlStatement);
+        }
+        catch (SQLException ex) {
+            // TODO Auto-generated catch block
+            System.out.println("Error Connecting to DB");
+            ex.printStackTrace();
+        }//Establishing connection
+    }
+
     public void display(){
         System.out.println("Entry Number: " + entryNum);
         System.out.println("Account ID: " + accountID);
