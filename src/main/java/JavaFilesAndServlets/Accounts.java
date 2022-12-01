@@ -171,12 +171,16 @@ public class Accounts extends HttpServlet {
 
 
 
-    public void createAccount(String name, String username, String cat, String subcat){
-        String sinsert  = "insert into account_info (name,userID, account_cat, account_subcat,acc_created) values (name,07, 'test' ,'subtest', 10/10/2022)";
-        System.out.println(sinsert);
+    public static void createAccount(String name, int userID, String account_cat, String account_subcat, String acc_created){
+        String sqlStatement  = "insert into account_info (name, userID, account_cat, account_subcat, acc_created) " +
+                "values ('" + name + "', '" + userID + "', '" + account_cat + "', '" + account_subcat + "', '" + acc_created + "')";
+        System.out.println(sqlStatement);
+        Statement statement;
         try{
-            int countInserted = stmt.executeUpdate(sinsert);
-            System.out.println(countInserted + " record updated.\n");
+            dbConnector db =  new dbConnector();
+            Connection connection = db.dbConnector();
+            statement = connection.createStatement();
+            statement.executeUpdate(sqlStatement);
         }
         catch (Exception err){
             System.out.println("Could not execute SQL");
@@ -234,7 +238,7 @@ public class Accounts extends HttpServlet {
         int accountId = 0;
 
         if(request.getParameter("create account")!= null){
-            createAccount(accountName,username, cat, subcat);
+            //createAccount(accountName,username, cat, subcat);
         }
 
         if(request.getParameter("select account")!= null){

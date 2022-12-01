@@ -43,18 +43,20 @@
 
 
   </form>
+  <form name="CreateJEandCOA" method="post" action="ManagerViewUpdateJEandCOA" style="border:1px solid #ccc">
   <div class="emailslots"><br>
-    Account Number <br><input type="text" id="accountnumber" placeholder="  Account #"><br><br>
-    Account Name <br><input type="text" id="accountname" placeholder="  Account Name"><br><br>
-    Account Category <br><input type="text" id="accountcategory" placeholder="  Account Category"><br><br>
-    Account Subcategory <br><input type="text" id="accountsubcategory" placeholder="  Account Subcategory"><br><br>
+    Account Name <br><input type="text" id="accountname" name="accountname" placeholder="  Account Name"><br><br>
+    Account Category <br><input type="text" id="accountcategory" name="accountcategory" placeholder="  Account Category"><br><br>
+    Account Subcategory <br><input type="text" id="accountsubcategory" name="accountsubcategory" placeholder="  Account Subcategory"><br><br>
+    Booking Date (Entry Date) <br><input type="date" name="date_picker"><br><br>
 
     Notes <br><textarea id="msg" placeholder="Enter message"></textarea><br><br>
-    <button class="button" onclick="" >UPDATE CHART OF ACCOUNTS</button>
+    <button class="button" input type="submit" name="updateChartOfAccounts" >UPDATE CHART OF ACCOUNTS</button>
 
     <p> <a href="ManagerView.jsp" style="color:black" >HOME </a></p>
 
   </div>
+  </form>
 
 </div>
 
