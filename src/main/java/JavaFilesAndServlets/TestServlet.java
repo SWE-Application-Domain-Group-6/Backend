@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
 
 /**
- * Servlet implementation class JavaFilesAndServlets.TestServlet
+ * This is the test servlet we used for debugging and testing purposes
  */
 @WebServlet("/JavaFilesAndServlets.TestServlet")
 public class TestServlet extends HttpServlet {

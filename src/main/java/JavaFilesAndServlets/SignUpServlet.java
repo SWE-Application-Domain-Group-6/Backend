@@ -55,6 +55,8 @@ public class SignUpServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+
+	//getting teh information from the frontend and writing to the db
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
@@ -74,12 +76,13 @@ public class SignUpServlet extends HttpServlet {
 		}
 
 		try {
+			//inserting the new user into the db
 			String sinsert = "from ui ('" + fname + "', '" +  lname + "', '" + email + "', '" + address + "', '" + temp + "')";
 			System.out.println(sinsert);
-
+			//calling the signup method
 			SignUp.signup(password, fname, lname, email, address, temp);
 
-
+			//redirecting based on user permissions
 			if(request.getParameter("pageName").equals("admin")){
 				RequestDispatcher rd=request.getRequestDispatcher("AdminView Confirmation Screen.jsp");
 				rd.forward(request,response);

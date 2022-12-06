@@ -10,6 +10,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Date;
 
+// servlet for the admin view page, formatted differently because this still largely uses the old servlet
+// and form system that we were using before switching most everything to jsps
 @WebServlet(name = "JavaFilesAndServlets.adminViewServlet", value = "/JavaFilesAndServlets.adminViewServlet")
 public class adminViewServlet extends HttpServlet {
     String fname;
@@ -26,10 +28,13 @@ public class adminViewServlet extends HttpServlet {
 
     }
 
+    //post method to get the data from the html form
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
+        //getting requests/responses to and from the webserver
         doGet(request, response);
+        //establishing db connection
         Connection connection;
         fname = request.getParameter("enterfname");
         lname = request.getParameter("lastname");
@@ -39,8 +44,7 @@ public class adminViewServlet extends HttpServlet {
         temp = request.getParameter("dob");
 
 
-        //TODO: Assign function numbers in the the HTML form so that it doesn't try and run every function
-
+        //if the create button has been pressed, run the signup function
         if(request.getParameter("create")!= null){
             try {
                 SignUp.signup(password, fname, lname, email, address, temp);
@@ -52,7 +56,7 @@ public class adminViewServlet extends HttpServlet {
 
         role = request.getParameter("newrole");
 
-
+        //if the assignrole button has been pressed, run the assign role function
         if(request.getParameter("assignrole")!= null){
             try {
                 email = request.getParameter("em");

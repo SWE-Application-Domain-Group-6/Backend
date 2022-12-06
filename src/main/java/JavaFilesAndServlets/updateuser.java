@@ -17,18 +17,21 @@ public class updateuser extends HttpServlet {
 
     }
 
-
+    //this is the method to update a users role
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email;
+       //getting the new role from the UI
         String role = request.getParameter("newrole");
 
         try {
+            //getting the user and updating their role
             email = request.getParameter("usn");
             adminView.updateUser(email, role);
 
             System.out.println(request.getParameter("pageName"));
 
+            //redirecting to the appropriate screen
             if(request.getParameter("pageName").equals("admin")){
                 RequestDispatcher rd=request.getRequestDispatcher("AdminView Confirmation Screen.jsp");
                 rd.forward(request,response);

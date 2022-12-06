@@ -11,10 +11,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+//class to create, read, or modify an account
 @WebServlet(name = "JavaFilesAndServlets.Accounts", value = "/JavaFilesAndServlets.Accounts")
 public class Accounts extends HttpServlet {
 
+    //account variables
     public int accountID;
     public int userID;
     public String name;
@@ -28,7 +29,7 @@ public class Accounts extends HttpServlet {
     public String acc_created;
     public AccountList accountList = new AccountList();
 
-
+    //creating getters and setters for all variables
     public int getAccountID() {
         return accountID;
     }
@@ -117,6 +118,7 @@ public class Accounts extends HttpServlet {
         this.acc_created = acc_created;
     }
 
+    //an account constructor with all the above variables
     public Accounts (int accountID, int userID, String name, String description, String account_cat, String account_subcat, double initial_balance,
                      double debit, double credit, double balance, String acc_created) throws SQLException {
         this.accountID = accountID;
@@ -132,34 +134,49 @@ public class Accounts extends HttpServlet {
         this.acc_created = acc_created;
     }
 
+    //empty constructor
     public Accounts() throws SQLException {
     }
 
+    //this returns all accounts found in the database
     public void getAllAccounts()throws SQLException{
+        //creating sql query
         String sqlStatement = ("select accountID, name, description from account_info");
         Statement statement;
         ResultSet resultSet;
+        //attempting to query db
         try {
+            //Establishing connection
             dbConnector db =  new dbConnector();
             Connection connection = db.dbConnector();
+            //specifying the query to run
             statement = connection.createStatement();
+            //setting the results to be the result of the query execution
             resultSet = statement.executeQuery(sqlStatement);
+
+            //while there is another entry in the db (another account), program will loop and add the account into the accountlist
             while(resultSet.next()){
+                //creating an account
                 Accounts a1 = new Accounts();
+                //setting the accountID from the db
                 a1.setAccountID(resultSet.getInt(1));
+                //setting the name from the db
                 a1.setName(resultSet.getString(2));
+                //setting the description from the db
                 a1.setDescription(resultSet.getString(3));
+                //add to accountlist
                 accountList.addAccount(a1);
             }
 
+            //catching any issues should the attempt fail
         } catch (SQLException ex) {
             // TODO Auto-generated catch block
             System.out.println("Error Connecting to DB");
             ex.printStackTrace();
-        }//Establishing connection
+        }
     }
 
-
+    //This is to call a db constructor globally which is used in some methods
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -170,27 +187,39 @@ public class Accounts extends HttpServlet {
 
 
 
-
+//this method creates and account and writes it into the DB
     public static void createAccount(String name, int userID, String account_cat, String account_subcat, String acc_created){
+        //creating SQL statement to create record in the accounts table
         String sqlStatement  = "insert into account_info (name, userID, account_cat, account_subcat, acc_created) " +
                 "values ('" + name + "', '" + userID + "', '" + account_cat + "', '" + account_subcat + "', '" + acc_created + "')";
+        //logging the SQL statement to console for easy debugging
         System.out.println(sqlStatement);
         Statement statement;
-        try{
+
+
+        //attempting to query db
+        try {
+            //Establishing connection
             dbConnector db =  new dbConnector();
             Connection connection = db.dbConnector();
+            //specifying the query to run
             statement = connection.createStatement();
             statement.executeUpdate(sqlStatement);
         }
+        //catching any issues should the attempt fail
         catch (Exception err){
             System.out.println("Could not execute SQL");
             err.printStackTrace();
         }
     }
 
+    //getting an account
     public void getAccount(String username){
+        //preparing SQL Statement
         String sinsert  = "select * from account_info where ()";
         System.out.println(sinsert);
+
+        //attempting to execute sql
         try{
             int countInserted = stmt.executeUpdate(sinsert);
             System.out.println(countInserted + " records found.\n");
@@ -201,13 +230,18 @@ public class Accounts extends HttpServlet {
         }
     }
 
+    //new method for creating an account entry
     public void createEntry(String name, String username, String cat, String subcat){
+        //preparing sql statement to create user
         String sinsert  = "insert into account_info (name,userID, account_cat, account_subcat,acc_created) values (name,07, 'test' ,'subtest', 10/10/2022)";
         System.out.println(sinsert);
+        //attempting to execute sql
         try{
             int countInserted = stmt.executeUpdate(sinsert);
             System.out.println(countInserted + " record updated.\n");
         }
+
+        //catching any issues should the attempt fail
         catch (Exception err){
             System.out.println("Could not execute SQL");
             err.printStackTrace();
@@ -221,6 +255,7 @@ public class Accounts extends HttpServlet {
             int countInserted = stmt.executeUpdate(sinsert);
             System.out.println(countInserted + " records found.\n");
         }
+        //catching any issues should the attempt fail
         catch (Exception err){
             System.out.println("Could not execute SQL");
             err.printStackTrace();
@@ -228,7 +263,7 @@ public class Accounts extends HttpServlet {
     }
 
 
-
+    //This is old code from where we were still using the servlet and using post to retrieve data
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String accountName = request.getParameter("");
