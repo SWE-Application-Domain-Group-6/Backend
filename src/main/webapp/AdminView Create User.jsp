@@ -36,7 +36,7 @@
 </div>
 
 
-<form method="post" action="SignUpServlet" >
+<form method="post" action="JavaFilesAndServlets.SignUpServlet" >
   <input type="hidden" name="pageName" value="admin" />
   <div class="main">
     <!-- top icon nav -->
